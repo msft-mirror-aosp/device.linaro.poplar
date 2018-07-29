@@ -3,8 +3,6 @@
 LOCAL_KERNEL := device/linaro/poplar-kernel/Image
 PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
 LOCAL_DTB := device/linaro/poplar-kernel/hi3798cv200-poplar.dtb
-# TODO: fix the dest dtb name, normal it is some varient of product.dtb
-PRODUCT_COPY_FILES += $(LOCAL_KERNEL):dtb
 PRODUCT_COPY_FILES += $(LOCAL_DTB):2ndbootloader
 
 # 1.2 rootfs
