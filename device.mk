@@ -184,6 +184,3 @@ DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 
 # VNDK libraries
 PRODUCT_PACKAGES += vndk_package
-
-# Add Launcher2 to work around Home Sample issue
-PRODUCT_PACKAGES += Launcher2
