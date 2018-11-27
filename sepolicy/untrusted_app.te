@@ -3,8 +3,7 @@ allow untrusted_app {
                       hi_tde_device
                       hi_gfx2d_device }:chr_file rw_file_perms;
 
-allow untrusted_app { cpuctl_device
-                      audio_device
+allow untrusted_app { audio_device
                       graphics_device
                       input_device
                       block_device
