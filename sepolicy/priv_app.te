@@ -8,7 +8,6 @@ allow priv_app proc_interrupts:file { open };
 allow priv_app proc_modules:file { open };
 allow priv_app sysfs_android_usb:file { open };
 allow priv_app zygote:dir { search };
-allow priv_app vendor_file:file { read open getattr };
 allow priv_app hi_vfmw_device:chr_file { write read open ioctl getattr};
 allow priv_app hi_overlay_file:file { read open getattr };
 

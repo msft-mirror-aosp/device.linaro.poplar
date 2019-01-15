@@ -160,16 +160,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     wificond \
-    wificond.rc \
     libwpa_client \
-    wpa_cli
+    wpa_supplicant \
+    hostapd
 ## config files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
-    $(LOCAL_PATH)/wifi/p2p_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant.conf \
-    $(LOCAL_PATH)/proprietary/bt-wifi/libwifi-hal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal.so \
-    $(LOCAL_PATH)/proprietary/bt-wifi/wpa_supplicant:$(TARGET_COPY_OUT_VENDOR)/bin/hw/wpa_supplicant \
-    $(LOCAL_PATH)/proprietary/bt-wifi/hostapd:$(TARGET_COPY_OUT_VENDOR)/bin/hostapd
+    $(LOCAL_PATH)/wifi/p2p_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant.conf
 ## service init.rc scripts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi.rc
@@ -184,6 +181,3 @@ DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 
 # VNDK libraries
 PRODUCT_PACKAGES += vndk_package
-
-# Add Launcher2 to work around Home Sample issue
-PRODUCT_PACKAGES += Launcher2
