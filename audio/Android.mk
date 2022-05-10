@@ -14,6 +14,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+$(eval $(call declare-1p-copy-files,device/linaro/poplar/audio,))
+
 # The default audio HAL module, which is a stub, that is loaded if no other
 # device specific modules are present. The exact load order can be seen in
 # libhardware/hardware.c
@@ -24,6 +26,8 @@ include $(CLEAR_VARS)
 
 LOCAL_HEADER_LIBRARIES += libhardware_headers
 LOCAL_MODULE := audio.primary.poplar
+LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
+LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_VENDOR_MODULE := true
 
@@ -37,4 +41,3 @@ LOCAL_C_INCLUDES += \
         system/media/audio_effects/include
 
 include $(BUILD_SHARED_LIBRARY)
-
