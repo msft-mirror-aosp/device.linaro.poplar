@@ -3,6 +3,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/poplar.mk
 
 COMMON_LUNCH_CHOICES := \
-    poplar-eng \
-    poplar-user \
-    poplar-userdebug
+    poplar-trunk_staging-eng \
+    poplar-trunk_staging-user \
+    poplar-trunk_staging-userdebug
